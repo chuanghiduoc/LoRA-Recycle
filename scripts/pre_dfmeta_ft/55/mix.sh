@@ -1,0 +1,25 @@
+python main.py \
+--multigpu 6 \
+--gpu 0 \
+--dataset mix \
+--testdataset mix \
+--val_interval 100 \
+--backbone base_clip_16 \
+--resolution 224 \
+--method pre_dfmeta_ft \
+--episode_batch 1 \
+--way_train 5 \
+--num_sup_train 5 \
+--num_qur_train 15 \
+--way_test 5 \
+--num_sup_test 5 \
+--num_qur_test 15 \
+--episode_train 240000 \
+--episode_test 600 \
+--outer_lr 1e-3 \
+--rank 4 \
+--synthesizer inversion \
+--prune_layer -1 \
+--prune_ratio 0.0 \
+--mask_ratio -1 \
+--pre_datapool_path you_should_input_the_path

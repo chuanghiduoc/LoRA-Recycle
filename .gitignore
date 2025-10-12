@@ -1,0 +1,20 @@
+# Hadoop MapReduce intermediate files
+hadoop_input.txt
+hadoop_output_*/
+test_input.txt
+test_input_small.txt
+mapper_output.txt
+sorted_mapper_output.txt
+reducer_output.txt
+mapper_log.txt
+reducer_log.txt
+
+# Hadoop generated data
+pre_datapool/
+checkpoints/
+
+data/
+train_loras_checkpoint.pth
+lorahub/
+LoRA-Recycle/
+pre_datapool/
