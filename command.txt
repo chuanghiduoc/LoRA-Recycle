@@ -1,5 +1,33 @@
+# ============================================
+# BENCHMARK COMMANDS
+# ============================================
+
+# Table 1: Full FT vs LoRA vs LoRA Recycle (100 tasks)
+python benchmark_table1.py --dataset miniimagenet --testdataset miniimagenet
+
+# Table 2: Recycle in-domain LoRAs (600 tasks per dataset)
+# Tests on: MiniImageNet, VGG-Flower, CUB
+python benchmark_table2.py
+
+# Table 3: Recycle cross-domain LoRAs (600 tasks per dataset)
+# Train on MiniImageNet, test on: ISIC, EuroSAT
+python benchmark_table3.py
+
+# Table 4: Complexity analysis with token pruning (100 tasks)
+python benchmark_table4.py --dataset cifar100 --testdataset cifar100
+
+# Table 5: Effect of sparse ratio on CUB dataset (100 tasks)
+python benchmark_table5.py --dataset cub --testdataset cub
+
+# ============================================
+# ORIGINAL TRAINING COMMANDS
+# ============================================
+
+# Train 100 LoRAs
 python train_100_loras.py --dataset flower --num_loras 100 --max_batches 10
 
+# Pre-generate synthetic data
 python main.py --preGenerate --dataset flower --lora_num 100 --pre_datapool_path ./pre_datapool/flower
 
+# Main training
 python main.py --dataset miniimagenet --testdataset flower --val_interval 100 --backbone base_clip_16 --resolution 224 --method pre_dfmeta_ft --episode_batch 1 --way_train 5 --num_sup_train 5 --num_qur_train 15 --way_test 5 --num_sup_test 5 --num_qur_test 15 --episode_train 5000 --episode_test 100 --rank 4 --pre_datapool_path ./pre_datapool/miniimagenet --gpu 0
