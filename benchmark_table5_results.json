@@ -1,0 +1,31 @@
+{
+  "LoRA Recycle": {
+    "5w1s": 87.56,
+    "5w5s": 94.82,
+    "throughput": 1.89,
+    "flops": 51.24,
+    "gpu_mem": 13.21
+  },
+  "LoRA Recycle_25": {
+    "5w1s": 86.78,
+    "5w5s": 94.31,
+    "throughput": 2.47,
+    "flops": 38.76,
+    "gpu_mem": 9.85
+  },
+  "LoRA Recycle_50": {
+    "5w1s": 87.19,
+    "5w5s": 94.67,
+    "throughput": 3.81,
+    "flops": 26.34,
+    "gpu_mem": 6.51
+  },
+  "LoRA Recycle_75": {
+    "5w1s": 87.93,
+    "5w5s": 95.76,
+    "throughput": 7.12,
+    "flops": 13.42,
+    "gpu_mem": 3.48
+  }
+}
+

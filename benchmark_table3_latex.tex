@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\begin{document}
+
+\begin{table}[ht]
+\centering
+\caption{Recycle cross-domain LoRAs. The VFM utilizes ViT-B/16 pre-trained by CLIP. Training domain: MiniImageNet, Testing domains: ISIC (medical) and EuroSAT (satellite).}
+\label{tab:cross_domain_loras}
+\begin{tabular}{lcccc}
+\toprule
+\multirow{2}{*}{\textbf{Method}} & \multicolumn{2}{c}{\textbf{ISIC}} & \multicolumn{2}{c}{\textbf{EuroSAT}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+& \textbf{5-way 1-shot} & \textbf{5-way 5-shot} & \textbf{5-way 1-shot} & \textbf{5-way 5-shot} \\
+\midrule
+Full Finetuning & 21.09 & 25.34 & 25.31 & 34.95 \\
+\midrule
+\textbf{LoRA Recycle} & 33.44 & 46.51 & 66.31 & 82.83 \\
+\textbf{LoRA Recycle}$_{\mathbf{25}}$ & 33.33 & 46.98 & 67.01 & 82.47 \\
+\textbf{LoRA Recycle}$_{\mathbf{50}}$ & \textbf{34.97} & 46.06 & \textbf{69.24} & 85.69 \\
+\textbf{LoRA Recycle}$_{\mathbf{75}}$ & 34.83 & \textbf{47.09} & 67.36 & \textbf{86.82} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
+

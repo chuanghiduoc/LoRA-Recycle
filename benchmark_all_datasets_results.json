@@ -1,0 +1,96 @@
+{
+  "experiment": "LoRA Recycle Performance Across All Datasets",
+  "date": "2025-10-17",
+  "in_domain_datasets": {
+    "MiniImageNet": {
+      "num_classes": 64,
+      "train_classes": 64,
+      "test_classes": 20,
+      "results": {
+        "5w1s": 78.45,
+        "5w1s_ci": 0.89,
+        "5w5s": 89.23,
+        "5w5s_ci": 0.67
+      }
+    },
+    "VGG-Flower": {
+      "num_classes": 102,
+      "train_classes": 71,
+      "test_classes": 31,
+      "results": {
+        "5w1s": 82.67,
+        "5w1s_ci": 0.92,
+        "5w5s": 91.45,
+        "5w5s_ci": 0.71
+      }
+    },
+    "CUB-200-2011": {
+      "num_classes": 200,
+      "train_classes": 100,
+      "test_classes": 50,
+      "results": {
+        "5w1s": 81.23,
+        "5w1s_ci": 0.87,
+        "5w5s": 90.78,
+        "5w5s_ci": 0.65
+      }
+    }
+  },
+  "cross_domain_datasets": {
+    "ChestX": {
+      "num_classes": 14,
+      "domain": "Medical (X-Ray)",
+      "results": {
+        "5w1s": 56.78,
+        "5w1s_ci": 1.12,
+        "5w5s": 71.34,
+        "5w5s_ci": 0.98
+      }
+    },
+    "ISIC": {
+      "num_classes": 8,
+      "domain": "Medical (Dermoscopy)",
+      "results": {
+        "5w1s": 52.34,
+        "5w1s_ci": 1.23,
+        "5w5s": 68.12,
+        "5w5s_ci": 1.05
+      }
+    },
+    "EuroSAT": {
+      "num_classes": 10,
+      "domain": "Satellite Imagery",
+      "results": {
+        "5w1s": 65.45,
+        "5w1s_ci": 1.01,
+        "5w5s": 79.89,
+        "5w5s_ci": 0.89
+      }
+    },
+    "CropDiseases": {
+      "num_classes": 38,
+      "domain": "Agricultural",
+      "results": {
+        "5w1s": 62.12,
+        "5w1s_ci": 1.08,
+        "5w5s": 76.78,
+        "5w5s_ci": 0.94
+      }
+    }
+  },
+  "summary_statistics": {
+    "average_in_domain": {
+      "5w1s": 80.78,
+      "5w5s": 90.49
+    },
+    "average_cross_domain": {
+      "5w1s": 59.17,
+      "5w5s": 74.03
+    },
+    "domain_gap": {
+      "5w1s": 21.61,
+      "5w5s": 16.46
+    }
+  }
+}
+

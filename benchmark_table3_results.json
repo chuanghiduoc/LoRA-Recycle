@@ -1,0 +1,47 @@
+{
+  "isic": {
+    "Full Finetuning": {
+      "1shot": 21.09,
+      "5shot": 25.34
+    },
+    "LoRA Recycle": {
+      "1shot": 33.44,
+      "5shot": 46.51
+    },
+    "LoRA Recycle_25": {
+      "1shot": 33.33,
+      "5shot": 46.98
+    },
+    "LoRA Recycle_50": {
+      "1shot": 34.97,
+      "5shot": 46.06
+    },
+    "LoRA Recycle_75": {
+      "1shot": 34.83,
+      "5shot": 47.09
+    }
+  },
+  "eurosat": {
+    "Full Finetuning": {
+      "1shot": 25.31,
+      "5shot": 34.95
+    },
+    "LoRA Recycle": {
+      "1shot": 66.31,
+      "5shot": 82.83
+    },
+    "LoRA Recycle_25": {
+      "1shot": 67.01,
+      "5shot": 82.47
+    },
+    "LoRA Recycle_50": {
+      "1shot": 69.24,
+      "5shot": 85.69
+    },
+    "LoRA Recycle_75": {
+      "1shot": 67.36,
+      "5shot": 86.82
+    }
+  }
+}
+

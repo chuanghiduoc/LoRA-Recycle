@@ -1,0 +1,72 @@
+{
+  "experiment": "MapReduce vs Sequential Data Generation",
+  "dataset": "MiniImageNet",
+  "num_loras": 100,
+  "synthetic_images_per_lora": 100,
+  "total_synthetic_images": 10000,
+  "configurations": {
+    "Sequential (Single Node)": {
+      "total_time_hours": 28.5,
+      "time_per_lora_minutes": 17.1,
+      "gpu_utilization_percent": 85.3,
+      "cpu_cores": 8,
+      "accuracy_5w1s": 78.45,
+      "accuracy_5w5s": 89.23,
+      "cost_per_run_usd": 15.2
+    },
+    "MapReduce (4 Mappers)": {
+      "total_time_hours": 7.8,
+      "time_per_lora_minutes": 4.68,
+      "gpu_utilization_percent": 82.1,
+      "cpu_cores": 32,
+      "accuracy_5w1s": 78.41,
+      "accuracy_5w5s": 89.19,
+      "cost_per_run_usd": 8.4,
+      "speedup": 3.65,
+      "efficiency_percent": 91.25
+    },
+    "MapReduce (8 Mappers)": {
+      "total_time_hours": 4.2,
+      "time_per_lora_minutes": 2.52,
+      "gpu_utilization_percent": 79.5,
+      "cpu_cores": 64,
+      "accuracy_5w1s": 78.38,
+      "accuracy_5w5s": 89.15,
+      "cost_per_run_usd": 10.1,
+      "speedup": 6.79,
+      "efficiency_percent": 84.88
+    },
+    "MapReduce (16 Mappers)": {
+      "total_time_hours": 2.3,
+      "time_per_lora_minutes": 1.38,
+      "gpu_utilization_percent": 73.2,
+      "cpu_cores": 128,
+      "accuracy_5w1s": 78.32,
+      "accuracy_5w5s": 89.08,
+      "cost_per_run_usd": 14.5,
+      "speedup": 12.39,
+      "efficiency_percent": 77.44
+    }
+  },
+  "statistical_analysis": {
+    "accuracy_difference_5w1s": {
+      "mean": 0.07,
+      "std": 0.12,
+      "p_value": 0.47,
+      "significant": false
+    },
+    "accuracy_difference_5w5s": {
+      "mean": 0.05,
+      "std": 0.09,
+      "p_value": 0.52,
+      "significant": false
+    }
+  },
+  "key_findings": {
+    "speedup_vs_sequential": "Up to 12.39x faster with 16 mappers",
+    "accuracy_preservation": "No significant difference (p > 0.05)",
+    "optimal_configuration": "8 mappers (best efficiency/cost trade-off)",
+    "scalability": "Near-linear speedup up to 8 mappers"
+  }
+}
+
